@@ -14,15 +14,24 @@ const requestOptions = {
     redirect: 'follow'
 };
 
+const formatNumber = (numero) => {
+    if ( numero < 10 ) {
+        return "0"+numero
+    }
+    return numero
+}
+
 const request = async () => {
     const request = await fetch(`${BASE_URL}/events/${id}`)
     const response = await request.json()
     const {name, poster, attractions, description, scheduled, number_tickets} = response
+    const newDate = new Date(scheduled)
+    const dataFormatada = `${newDate.getFullYear()}-${formatNumber(newDate.getMonth())}-${newDate.getDate()}T${formatNumber(newDate.getHours())}:${formatNumber(newDate.getMinutes())}`
     inputNome.value = name
     inputBanner.value = poster
     inputAtracoes.value = attractions
     inputDescricao.value = description
-    inputData.value = scheduled
+    inputData.value = dataFormatada
     inputLotacao.value = number_tickets
 }
 
