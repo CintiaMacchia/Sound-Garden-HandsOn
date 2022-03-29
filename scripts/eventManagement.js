@@ -28,5 +28,6 @@ form.addEventListener('submit', async event => {
     }
     const response = await fetch(`${BASE_URL}/events`, options)
     const responseContent = await response.json();
-    console.log(responseContent);
+    alert('Evento cadastrado com sucesso!');
 })
+
