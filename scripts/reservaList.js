@@ -16,10 +16,11 @@ const requestOptions = {
 
 const request = async () => {
     const request = await fetch(`${BASE_URL}/bookings/event/${id}`, requestOptions)
-    console.log(request)
+    //console.log(request)
     const response = await request.json()
     let htmlData = ''
     for (let index = 0; index < response.length; index++) {
+        //console.log(response[index]._id)
         htmlData += `<div class="mb-3">
         <label for="nome" class="form-label">Dono da reserva</label>
         <input type="text" class="form-control" id="nome-dono" aria-describedby="nome" value="${response[index].owner_name}"
@@ -35,6 +36,7 @@ const request = async () => {
         <input type="number" class="form-control" id="numingressos" aria-describedby="lotacao"
             value="${response[index].number_tickets}" disabled>
     </div>
+    <a href="reserva.html?id=${response[index]._id}" class="btn btn-danger">excluir reserva</a>
     <hr>`
     }
     form.innerHTML = htmlData
