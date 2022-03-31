@@ -50,7 +50,6 @@ footer nav ul li  {
     padding: 10px;
 }
 
-
 .button-close-modal {
     background-color: rgb(194, 24, 91);
     padding: 5px 40px;
@@ -66,7 +65,7 @@ footer nav ul li  {
     background-color: rgb(253, 152, 192);
     border: 2px solid rgb(253, 152, 192);
     color: rgb(194, 24, 91);
-    ; }
+ }
 
 .button-close-modal:active {
     background-color: rgb(253, 152, 192);
@@ -74,8 +73,7 @@ footer nav ul li  {
     color: rgb(194, 24, 91);
 }
 
-
-.button-reservar {
+.button-booking {
     padding: 5px 40px;
     background-color: #212529;
     border: 2px solid #212529;
@@ -86,14 +84,14 @@ footer nav ul li  {
     text-decoration: none;
 }
 
-.button-reservar:hover {
+.button-booking:hover {
     background-color: rgb(253, 152, 192);
     border: 2px solid rgb(253, 152, 192);
     transition: background 0.3s ease 0s;
     color:  #212529;
     ; }
 
-.button-reservar:active {
+.button-booking:active {
     background-color: rgb(253, 152, 192);
     border: 2px solid rgb(194, 24, 91);
     color: rgb(194, 24, 91);
