@@ -105,6 +105,8 @@ footer nav ul li  {
     width: 100vw;
     height: 100vh;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -183,4 +185,9 @@ footer nav ul li  {
 
 #slider img.selected {
     opacity: 1;
+}
+
+#cardContainer img {
+    width: 30%;
+    height: 30%;
 }

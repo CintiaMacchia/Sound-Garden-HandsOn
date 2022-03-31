@@ -1,5 +1,5 @@
 const cardsContainer = document.querySelector("#cardContainer");
-console.log(cardsContainer);
+//console.log(cardsContainer);
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 const requestOptions = {
   method: "GET",
@@ -9,7 +9,7 @@ const requestOptions = {
 const listEvents = async () => {
   const request = await fetch(`${BASE_URL}/events`, requestOptions);
   const responseContent = await request.json();
-  console.log(responseContent);
+  //console.log(responseContent);
   let htmlData = "";
   for (let index = 0; index < responseContent.length; index++) {
     const datas = responseContent[index].scheduled;
