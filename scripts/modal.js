@@ -1,4 +1,4 @@
-const buttonOpenModal = document.querySelector("#cardContainer");
+let buttonsOpenModal = document.querySelectorAll(".openModal");
 const buttonCloseModal = document.querySelector(".button-close-modal");
 const buttonBooking = document.querySelector(".button-booking");
 const inputNumberTickets = document.querySelector("#number-tickets");
@@ -10,15 +10,20 @@ const inputDataEvento = document.querySelector("#data-evento");
 let idURL = window.location.href.split("=")[1];
 console.log(idURL);
 
-buttonOpenModal.addEventListener(
-  "click",
-  (openModal = () => {
-    document.querySelector("#dv-modal").style.display = "block";
-    idURL = window.location.href.split("=")[1];
-    console.log(idURL);
-    listEventsById();
-  })
-);
+function adicionarEvento() {
+  buttonsOpenModal = document.querySelectorAll(".openModal");
+  buttonsOpenModal.forEach(btn => {
+    btn.addEventListener(
+      "click",
+      (openModal = () => {
+        document.querySelector("#dv-modal").style.display = "block";
+        console.log(btn);
+        console.log(btn.getAttribute('event-id'));
+        listEventsById(btn.getAttribute('event-id'));
+      })
+    );
+  });
+}
 
 buttonBooking.addEventListener("click", async (booking) => {
   const idURL = window.location.href.split("=")[1];
@@ -52,21 +57,14 @@ buttonCloseModal.addEventListener(
     (document.querySelector("#dv-modal").style.display = "none"))
 );
 
-
-const listEventsById = async () => {
-    const request = await fetch(`${BASE_URL}/events/6244e75e44be9a585dfd9908`, requestOptions);
-    const responseContent = await request.json();
-
-    // responseContent.forEach(evento => {
-    //   const datas = evento.scheduled;
-    //     const datasFormatadas = new Date(datas);
-    //     inputEvento.value = evento.name;
-    //     inputDataEvento.value = datasFormatadas;
-    //     inputQtdeLugares.value = evento.number_tickets;      
-    // });
-     console.log(responseContent);
-
-
+const listEventsById = async (event_id) => {  
+  const request = await fetch(`${BASE_URL}/events/${event_id}`, requestOptions);
+  const responseContent = await request.json();
+  console.log(responseContent);
+  const {name, number_tickets, scheduled} = responseContent
+    const datas = scheduled;
+    const datasFormatadas = new Date(datas);
+    inputEvento.value = name;
+    inputDataEvento.value = datasFormatadas;
+    inputQtdeLugares.value = number_tickets;
 }
-
-
