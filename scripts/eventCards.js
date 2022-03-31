@@ -12,7 +12,7 @@ const listEvents = async () => {
   for (let index = 0; index < 3; index++) {
     const datas = responseContent[index].scheduled;
     const datasFormatadas = new Date(datas);
-    console.log(responseContent[index]._id);
+    //console.log(responseContent[index]._id);
     htmlData += ` <article class="evento card p-5 m-3">
         <h2>${responseContent[index].name} - ${datasFormatadas.toLocaleString(
       "en-GB"
