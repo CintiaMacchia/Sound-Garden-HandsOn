@@ -8,7 +8,7 @@ const inputEvento = document.querySelector("#evento");
 const inputQtdeLugares = document.querySelector("#lugares-disponiveis");
 const inputDataEvento = document.querySelector("#data-evento");
 let idURL = window.location.href.split("=")[1];
-console.log(idURL);
+
 
 function adicionarEvento() {
   buttonsOpenModal = document.querySelectorAll(".openModal");
