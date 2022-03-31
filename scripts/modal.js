@@ -49,7 +49,8 @@ buttonCloseModal.addEventListener(
   (closeModal = () =>
     (document.querySelector("#dv-modal").style.display = "none"))
 );
-
+'
+'
 
 const listEventsById = async () => {
     const request = await fetch(`${BASE_URL}/events/6244e75e44be9a585dfd9908`, requestOptions);
