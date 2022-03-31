@@ -63,7 +63,7 @@ const listEventsById = async (event_id) => {
   console.log(responseContent);
   const {name, number_tickets, scheduled} = responseContent
     const datas = scheduled;
-    const datasFormatadas = new Date(datas);
+    const datasFormatadas = new Date(datas).toLocaleString("pt-BR");
     inputEvento.value = name;
     inputDataEvento.value = datasFormatadas;
     inputQtdeLugares.value = number_tickets;

@@ -132,14 +132,14 @@ footer nav ul li  {
     align-content: flex-end;
     padding: 20px;}
 
-.modal-body {
+/* .modal-body {
    background-color: rgb(255, 255, 255);
    background-image: url(../img/background-modal.jpg);
    background-repeat: no-repeat;
    background-size: cover;   
    display: flex;
    flex-direction: column;
-}
+} */
 
 .modal-footer {
     background-color: #F8BBD0;
@@ -148,17 +148,37 @@ footer nav ul li  {
     align-content: flex-end;
 }
 
-.formulario {
+/* .formulario {
     border-radius: 8px;
-}
-
+} */
+/* 
 .modal label {
     font-weight: bold;
-}
+} */
+
 #modal-eventos {
     display: flex;
     margin-top: 20px;
     align-items: center;
+    flex-direction: column;
+}
+
+#formulario input{
+    border-radius: 8px;
+    border-style: none;
+    background: linear-gradient(rgb(248 249 250), rgb(228 119 186 / 37%));
+}
+
+.modal label {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.modal-body {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(228, 119, 186, 0.5)), url(../img/background-modal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
     flex-direction: column;
 }
 

@@ -15,7 +15,7 @@ const listEvents = async () => {
     //console.log(responseContent[index]._id);
     htmlData += ` <article class="evento card p-5 m-3">
         <h2>${responseContent[index].name} - ${datasFormatadas.toLocaleString(
-      "en-GB"
+      "pt-BR"
     )}</h2>
         <h4>${responseContent[index].attractions}</h4>
         <p>${responseContent[index].description}</p>
