@@ -30,4 +30,3 @@ form.addEventListener('submit', async event => {
     const responseContent = await response.json();
     alert('Evento cadastrado com sucesso!');
 })
-
