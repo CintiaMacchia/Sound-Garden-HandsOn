@@ -13,6 +13,7 @@ header {
     width: 100%;
     background-color: #fff;
 }
+
 aside {
     min-height: 100vh;
 }
@@ -49,58 +50,119 @@ footer nav ul li  {
     padding: 10px;
 }
 
-/*Danilo Sales - estilizando o modal*/ 
+
 .button-close-modal {
-    background-color: rgb(33, 156, 70);
-    padding: 5px 10px 5px 10px;
-    border: 2px solid rgb(4, 92, 30);
+    background-color: rgb(194, 24, 91);
+    padding: 5px 40px;
+    border: 2px solid rgb(194, 24, 91);
     cursor: pointer;
-    transition: background .3s;
+    transition: background 0.3s ease 0s;
     border-radius: 5px;
-    color: #FFF;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .button-close-modal:hover {
-    background-color: rgb(4, 92, 30);
-}
+    background-color: rgb(253, 152, 192);
+    border: 2px solid rgb(253, 152, 192);
+    color: rgb(194, 24, 91);
+    ; }
 
 .button-close-modal:active {
-    background-color: rgb(129, 255, 166);
-    color: rgb(4, 92, 30);
+    background-color: rgb(253, 152, 192);
+    border: 2px solid rgb(194, 24, 91);
+    color: rgb(194, 24, 91);
+}
+
+
+.button-reservar {
+    padding: 5px 40px;
+    background-color: #212529;
+    border: 2px solid #212529;
+    cursor: pointer;
+    transition: background 0.5s ease 0s;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.button-reservar:hover {
+    background-color: rgb(253, 152, 192);
+    border: 2px solid rgb(253, 152, 192);
+    transition: background 0.3s ease 0s;
+    color:  #212529;
+    ; }
+
+.button-reservar:active {
+    background-color: rgb(253, 152, 192);
+    border: 2px solid rgb(194, 24, 91);
+    color: rgb(194, 24, 91);
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100vw;
     height: 100vh;
     display: none;
 }
 
 .modal-content {
-    margin: 0 auto;
-    margin-top: 3%;
+    margin:0 auto;
     max-width: 600px;
-    background-color: #eee;
-    padding: 0;
-    box-shadow: 0 0 2px #fff;
+    background-color: rgb(238, 238, 238);
+    padding: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 2px;
+    display: flex;
+    flex-direction: column;
 }
 
-.modal-header h1{
+.modal-header h1 {
     font-weight: bold;
     text-align: center;
+    color: #dd0a28;
 }
 
-.modal-header, .modal-body, .modal-footer{
-    padding: 10px;
+.modal-header {
+    background-color: #F8BBD0;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    padding: 20px;}
+
+.modal-body {
+   background-color: rgb(255, 255, 255);
+   background-image: url(../img/background-modal.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;   
+   display: flex;
+   flex-direction: column;
 }
 
-.modal-header{
-    background-color: #ccc;
+.modal-footer {
+    background-color: #F8BBD0;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
 }
 
-.modal-footer{
-    background-color: #ccc;
+.formulario {
+    border-radius: 8px;
 }
+
+.modal label {
+    font-weight: bold;
+}
+#modal-eventos {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* #lista-eventos, 
+#data-eventos{
+    width: 300px;
+} */
