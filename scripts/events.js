@@ -20,12 +20,12 @@ const listEvents = async () => {
     )}</h2>
         <h4>${responseContent[index].attractions}</h4>
         <p>${responseContent[index].description}</p>
-        <a href="#?id=${responseContent[index]._id}" event-id="${
-      responseContent[index]._id
-    }" class="btn btn-primary">reservar ingresso</a>
+        <a href="#?id=${responseContent[index]._id}" event-id="${responseContent[index]._id
+      }" class="btn btn-primary">reservar ingresso</a>
     </article>`;
   }
   cardsContainer.innerHTML = htmlData;
+  adicionarEvento();
 };
 
 listEvents();

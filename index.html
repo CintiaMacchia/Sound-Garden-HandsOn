@@ -8,12 +8,12 @@
     <title>Sound Garden</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header class=" d-flex justify-content-center align-items-center">
-        <img src="img/Sound-logo (1).png" width="300" alt="">
+        <img src="./img/Sound-logo (1).png" width="300" alt="">
     </header>
     <main>
         <section class="d-flex justify-content-center align-items-center">
@@ -31,7 +31,7 @@
                 <img src="./img/Spinner-1s-64px.gif" alt="loader" srcset="" width="64px" max-height="64px">
             </div>
             <div class="container text-center">
-                <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
+                <a href="./eventos.html" class="btn btn-secondary">ver todos os eventos</a>
             </div>
         </section>
         <section class="full d-flex justify-content-center align-items-center"
@@ -58,7 +58,7 @@
                             quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
                     </div>
                     <div class="col">
-                        <img src="img/music.svg" width="450px">
+                        <img src="./img/music.svg" width="450px">
                     </div>
                 </div>
             </div>
@@ -72,21 +72,21 @@
                 <h1>Reserve já o seu Ingresso!</h1>
             </div>
 
-            <div class="modal-body" >
+            <div class="modal-body">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" class="formulario" name="nome" required>
                 <label for="e-mail">E-mail</label>
                 <input type="email" id="e-mail" class="formulario" name="e-mail" required>
                 <label for="tickets">Quantidade de ingressos</label>
                 <input type="tickets" id="number-tickets" class="formulario" name="quantidade de ingressos" required>
-                  <br>
-                <div id="modal-eventos">                    
+                <br>
+                <div id="modal-eventos">
                     <label for="label-evento">Evento</label>
-                    <input type="search" id="evento" class="formulario" name="lista-eventos">
+                    <input type="search" id="evento" class="formulario" name="lista-eventos" disabled>
                     <label for="data-evento">Data</label>
-                    <input type="datetime" id="data-evento" class="formulario" name="data-eventos">
+                    <input type="datetime" id="data-evento" class="formulario" name="data-eventos" disabled>
                     <label for="label-lugares">Lugares disponíveis</label>
-                    <input type="text" id="lugares-disponiveis" class="formulario" name="lugares-eventos">
+                    <input type="text" id="lugares-disponiveis" class="formulario" name="lugares-eventos" disabled>
                 </div>
             </div>
 
@@ -100,23 +100,23 @@
     <footer>
         <div class="container d-flex justify-content-center align-items-center">
             <a href="#">
-                <img src="img/Sound-logo-black (1).png" width="200px" alt="">
+                <img src="./img/Sound-logo-black (1).png" width="200px" alt="">
             </a>
             <nav>
                 <ul>
                     <li>
-                        <a href="eventos.html">eventos</a>
+                        <a href="./eventos.html">eventos</a>
                     </li>
                     <li>
-                        <a href="admin.html">painel administrativo</a>
+                        <a href="./admin.html">painel administrativo</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </footer>
     <script src="./scripts/banner.js"></script>
-    <script src="./scripts/eventCards.js"></script>
     <script src="./scripts/modal.js"></script>
+    <script src="./scripts/eventCards.js"></script>
 </body>
 
 </html>

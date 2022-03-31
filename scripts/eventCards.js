@@ -21,10 +21,11 @@ const listEvents = async () => {
         <p>${responseContent[index].description}</p>
         <a href="#?id=${responseContent[index]._id}" event-id="${
       responseContent[index]._id
-    }" class="btn btn-primary">reservar ingresso</a>
+    }" class="btn btn-primary openModal">reservar ingresso</a>
     </article>`;
   }
   cardsContainer.innerHTML = htmlData;
+  adicionarEvento();
 };
 
 listEvents();
