@@ -25,7 +25,7 @@ const listEvents = async () => {
     }" class="btn btn-primary">reservar ingresso</a>
     </article>`;
   }
-  cardsContainer.innerHTML += htmlData;
+  cardsContainer.innerHTML = htmlData;
 };
 
 listEvents();
