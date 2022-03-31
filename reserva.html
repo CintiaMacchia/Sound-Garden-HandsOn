@@ -50,15 +50,32 @@
                         </a>
                     </li>
                 </ul>
+                <hr>
+
             </aside>
             <main class="col-9  p-5">
                 <div class="my-5">
-                    <h1>Reservas</h1>
+                    <h1>Excluir reserva</h1>
                 </div>
-                <div id="idForm">
+                <div>
                     <!-- - cadastro de evento (nome, atrações, descrição, horário, data, numero de ingressos) -->
                     <form class="col-6">
-                        
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Dono da Reserva</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="" value=""
+                                disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="banner" class="form-label">E-Mail</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="banner"
+                                value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lotacao" class="form-label">Ingressos (número de ingressos reservados)</label>
+                            <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao"
+                                value="" disabled>
+                        </div>
+                        <button type="submit" eventId="" class="btn btn-danger">excluir pra sempre</button>
                     </form>
                 </div>
             </main>
@@ -67,7 +84,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="scripts/reservaList.js"></script>
+    <script src="scripts/deleteReserva.js"></script>
 </body>
 
 </html>
