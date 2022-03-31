@@ -7,16 +7,18 @@ const inputEmail = document.querySelector("#e-mail");
 const inputEvento = document.querySelector("#evento");
 const inputQtdeLugares = document.querySelector("#lugares-disponiveis");
 const inputDataEvento = document.querySelector("#data-evento");
-
+let idURL = window.location.href.split("=")[1];
+console.log(idURL);
 
 buttonOpenModal.addEventListener(
   "click",
   (openModal = () => {
     document.querySelector("#dv-modal").style.display = "block";
-    //listEventsById();
+    idURL = window.location.href.split("=")[1];
+    console.log(idURL);
+    listEventsById();
   })
 );
-
 
 buttonBooking.addEventListener("click", async (booking) => {
   const idURL = window.location.href.split("=")[1];
@@ -49,24 +51,22 @@ buttonCloseModal.addEventListener(
   (closeModal = () =>
     (document.querySelector("#dv-modal").style.display = "none"))
 );
-'
-'
-
-// const listEventsById = async () => {
-//     console.log(idURL)
-//     const request = await fetch(`${BASE_URL}/events/6244e75e44be9a585dfd9908`, requestOptions);
-//     const responseContent = await request.json();
-
-//     // responseContent.forEach(evento => {
-//     //   const datas = evento.scheduled;
-//     //     const datasFormatadas = new Date(datas);
-//     //     inputEvento.value = evento.name;
-//     //     inputDataEvento.value = datasFormatadas;
-//     //     inputQtdeLugares.value = evento.number_tickets;      
-//     // });
-//     //console.log(responseContent);
 
 
-// }
+const listEventsById = async () => {
+    const request = await fetch(`${BASE_URL}/events/6244e75e44be9a585dfd9908`, requestOptions);
+    const responseContent = await request.json();
+
+    // responseContent.forEach(evento => {
+    //   const datas = evento.scheduled;
+    //     const datasFormatadas = new Date(datas);
+    //     inputEvento.value = evento.name;
+    //     inputDataEvento.value = datasFormatadas;
+    //     inputQtdeLugares.value = evento.number_tickets;      
+    // });
+     console.log(responseContent);
+
+
+}
 
 
