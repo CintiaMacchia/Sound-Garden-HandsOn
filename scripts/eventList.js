@@ -6,6 +6,7 @@ const requestOptions = {
     }
 
 const listEvents = async () => {
+    try{
     const request = await fetch(`${BASE_URL}/events`, requestOptions)
     const responseContent = await request.json()
     let htmlData = ''
@@ -25,6 +26,9 @@ const listEvents = async () => {
     </tr>`
     }
     table.innerHTML = htmlData
+}catch(erro){
+    alert("Servidor indisponível, tente mais tarde.");
+}
 }
 
 listEvents()

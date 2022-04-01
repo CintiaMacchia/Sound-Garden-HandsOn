@@ -37,16 +37,19 @@ buttonBooking.addEventListener("click", async (booking) => {
   };
   try {
     const response = await fetch(`${BASE_URL}/bookings`, mountURL);
-
     if (response.status != 201) {
-      if (checaEmail(inputEmail.value) == "NOK") {
+      if (checaEmail(inputEmail.value)) {
         alert("Informe um e-mail válido!");
       } else {
-        alert("Problema com os dados da reserva! Tente novamente");
+        if(parseInt(inputNumberTickets.value) = NaN){
+          alert("Informe um valor numerico para a Quantidade de ingressos");
+        } else {
+        alert("Problema com os dados da Tente novamente");
+        }
       }
-      returnBegin();
-    } else {
-      console.log(response.status);
+    } else{
+      
+       console.log(response.status);
 
       const responseContent = await response.json();
 
@@ -54,7 +57,7 @@ buttonBooking.addEventListener("click", async (booking) => {
       returnBegin();
     }
   } catch (error) {
-    alert("Erro tente reservar novamente!");
+    alert("Servidor indisponível, tente mais tarde.");
     returnBegin();
   }
 });
@@ -76,6 +79,8 @@ const listEventsById = async (event_id) => {
   inputDataEvento.value = datasFormatadas;
   inputQtdeLugares.value = number_tickets;
 };
+
+
 
 //funções uteis
 returnBegin = () => {
