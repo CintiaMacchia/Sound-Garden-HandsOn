@@ -13,14 +13,12 @@ let idURL = window.location.href.split("=")[1];
 function adicionarEvento() {
   buttonsOpenModal = document.querySelectorAll(".openModal");
   buttonsOpenModal.forEach(btn => {
-    btn.addEventListener(
-      "click",
-      (openModal = () => {
+    btn.addEventListener("click", () => {
         document.querySelector("#dv-modal").style.display = "block";
-        console.log(btn);
-        console.log(btn.getAttribute('event-id'));
+        //console.log(btn);
+        //console.log(btn.getAttribute('event-id'));
         listEventsById(btn.getAttribute('event-id'));
-      })
+      }
     );
   });
 }
@@ -57,14 +55,14 @@ buttonCloseModal.addEventListener(
     (document.querySelector("#dv-modal").style.display = "none"))
 );
 
-const listEventsById = async (event_id) => {  
+const listEventsById = async (event_id) => {
   const request = await fetch(`${BASE_URL}/events/${event_id}`, requestOptions);
   const responseContent = await request.json();
-  console.log(responseContent);
-  const {name, number_tickets, scheduled} = responseContent
-    const datas = scheduled;
-    const datasFormatadas = new Date(datas).toLocaleString("pt-BR");
-    inputEvento.value = name;
-    inputDataEvento.value = datasFormatadas;
-    inputQtdeLugares.value = number_tickets;
+  //console.log(responseContent);
+  const { name, number_tickets, scheduled } = responseContent
+  const datas = scheduled;
+  const datasFormatadas = new Date(datas).toLocaleString("pt-BR");
+  inputEvento.value = name;
+  inputDataEvento.value = datasFormatadas;
+  inputQtdeLugares.value = number_tickets;
 }

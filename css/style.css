@@ -182,6 +182,8 @@ footer nav ul li  {
     flex-direction: column;
 }
 
+
+
 /* #lista-eventos, 
 #data-eventos{
     width: 300px;
@@ -210,4 +212,16 @@ footer nav ul li  {
 #cardContainer img {
     width: 30%;
     height: 30%;
+}
+
+#cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 465px) {
+    #musicSvg {
+        display: none;
+    }
 }

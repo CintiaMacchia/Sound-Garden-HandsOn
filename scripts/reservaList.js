@@ -15,9 +15,11 @@ const requestOptions = {
 };
 
 const request = async () => {
+    try {
     const request = await fetch(`${BASE_URL}/bookings/event/${id}`, requestOptions)
     //console.log(request)
     const response = await request.json()
+    console.log(response)
     let htmlData = ''
     for (let index = 0; index < response.length; index++) {
         //console.log(response[index]._id)
@@ -39,7 +41,11 @@ const request = async () => {
     <a href="reserva.html?id=${response[index]._id}" class="btn btn-danger">excluir reserva</a>
     <hr>`
     }
-    form.innerHTML = htmlData
+    form.innerHTML = htmlData 
+    } catch(e) {
+        console.log(e)
+    }
+    
 }
 
 request()
